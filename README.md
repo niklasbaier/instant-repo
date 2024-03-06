@@ -1,5 +1,7 @@
 # project-template
 
+if cloned, delete the changelog.md, and reset the versions back to 0.1.0 in pyproject.toml and `src/app/__init__.py`
+
 Install pyenv:
 
 ```
@@ -26,6 +28,16 @@ Install poetry
 poetry install
 ```
 
-ideas
+the documentation can be run via
 
-- CICD
+```
+mkdocs serve
+```
+
+can be hosted on GitHub pages via GitHub actions
+
+# upcoming (maybe)
+
+- https://engineeringfordatascience.com/posts/python_logging/
+- https://github.com/folke/devmoji
+- proper CICD

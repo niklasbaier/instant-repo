@@ -17,6 +17,7 @@ mypy = "*"
 types-requests = "*"
 pre-commit = "*"
 commitizen = "*"
+mkdocs-material = "*"
 
 [build-system]
 requires = ["poetry-core"]
