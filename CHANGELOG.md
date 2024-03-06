@@ -1,3 +1,9 @@
+## 0.4.0 (2024-03-06)
+
+### Feat
+
+- sync poetry and commitizen versions
+
 ## 0.3.0 (2024-03-06)
 
 ### Feat
