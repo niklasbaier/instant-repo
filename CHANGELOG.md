@@ -1,3 +1,9 @@
+## v0.8.0 (2024-03-06)
+
+### Feat
+
+- add mkdocs deployment
+
 ## v0.7.0 (2024-03-06)
 
 ### Feat
