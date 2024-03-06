@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
+pytest = "*"
 black = "*"
 flake8 = "*"
 isort = "*"
@@ -17,13 +18,16 @@ types-requests = "*"
 pre-commit = "*"
 commitizen = "*"
 
-[tool]
-[tool.commitizen]
-name = "cz_conventional_commits"
-version = "0.4.0"
-version_files = ["pyproject.toml:^version"]
-tag_format = "$version"
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.4.0"
+tag_format = "v$version"
+version_files = ["pyproject.toml:^version"]
+update_changelog_on_bump = true
+changelog_incremental = true
+changelog_merge_prerelease = true
+bump_message = "bump: $current_version -> $new_version"
