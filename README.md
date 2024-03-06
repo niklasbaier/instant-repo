@@ -35,6 +35,10 @@ mkdocs serve
 ```
 
 can be hosted on GitHub pages via GitHub actions
+repo settings > pages > Build and deployment
+
+> Source > Deploy from a branch
+> Branch > gh-pages > / (root) > Save
 
 # upcoming (maybe)
 
