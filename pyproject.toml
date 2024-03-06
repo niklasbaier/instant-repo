@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "project-template"
+version = "0.1.0"
+description = "template for personal projects"
+authors = ["niklasbaier <niklas.baier@yahoo.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+black = "*"
+flake8 = "*"
+isort = "*"
+mypy = "*"
+types-requests = "*"
+pre-commit = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
