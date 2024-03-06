@@ -17,6 +17,12 @@ types-requests = "*"
 pre-commit = "*"
 commitizen = "*"
 
+[tool]
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+tag_format = "$version"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
