@@ -1,3 +1,9 @@
+## v0.6.0 (2024-03-06)
+
+### Feat
+
+- project structure and some README stuff
+
 ## v0.5.0 (2024-03-06)
 
 ### Feat
