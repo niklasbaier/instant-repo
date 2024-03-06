@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "project-template"
-version = "0.1.0"
+version = "0.3.0"
 description = "template for personal projects"
 authors = ["niklasbaier <niklas.baier@yahoo.de>"]
 readme = "README.md"
@@ -21,6 +21,7 @@ commitizen = "*"
 [tool.commitizen]
 name = "cz_conventional_commits"
 version = "0.3.0"
+version_files = ["pyproject.toml:^version"]
 tag_format = "$version"
 
 [build-system]
