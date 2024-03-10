@@ -1,3 +1,9 @@
+## v0.8.1 (2024-03-10)
+
+### Fix
+
+- add medium to mkdocs template
+
 ## v0.8.0 (2024-03-06)
 
 ### Feat
