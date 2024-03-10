@@ -32,6 +32,8 @@ extra:
       link: https://github.com/niklasbaier
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/niklasbaier/
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@niklas.baier
 
 markdown_extensions:
   - pymdownx.highlight:
