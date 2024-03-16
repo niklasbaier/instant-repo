@@ -1,3 +1,9 @@
+## v0.9.2 (2024-03-16)
+
+### Fix
+
+- change project name and add project overview to docs
+
 ## v0.9.1 (2024-03-16)
 
 ### Fix
