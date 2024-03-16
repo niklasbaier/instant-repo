@@ -18,6 +18,7 @@ types-requests = "*"
 pre-commit = "*"
 commitizen = "*"
 mkdocs-material = "*"
+mkdocstrings = { extras = ["python"], version = "^0.24.1" }
 
 [build-system]
 requires = ["poetry-core"]

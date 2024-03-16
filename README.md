@@ -5,7 +5,7 @@ This is a template repository that can be cloned/forked to easily create new pro
 - dependency management via `poetry`
 - pre-commit hooks for formatters & linters such as `black`, `flake8`, `mypy`
 - semantic versioning & changelog releases via `commitizen`
-- automatic documenation via `mkdocs`
+- automatic documenation via `mkdocs` following the [Diátaxis documentation framework](https://diataxis.fr/) best practices
 - a proper project structure / skeleton
 
 If cloned/forked, delete the `CHANGELOG.md`, and reset the `[tool.poetry]/version` and `[tool.commitizen]/version` back to `0.1.0` in the `pyproject.toml`, as well as in and `src/app/__init__.py`.
