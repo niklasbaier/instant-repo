@@ -5,7 +5,7 @@
 This module allows the user to make mathematical calculations.
 
 Examples:
-    >>> from project_template.src import app.mkdocstrings_example.py
+    >>> from project_template.src import app
     >>> mkdocstrings_example.function_mkdocstrings_example(2, 4)
     6.0
 
