@@ -1,3 +1,9 @@
+## v0.9.1 (2024-03-16)
+
+### Fix
+
+- add mkdocstrings[python] to CI
+
 ## v0.9.0 (2024-03-16)
 
 ### Feat
