@@ -1,3 +1,10 @@
+## v0.9.3 (2024-03-16)
+
+### Fix
+
+- replace formatters & linters with ruff
+- typo
+
 ## v0.9.2 (2024-03-16)
 
 ### Fix

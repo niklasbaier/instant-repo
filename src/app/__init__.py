@@ -7,4 +7,4 @@ Modules exported by this package:
 - `mkdocstrings_example`: Quick description about contents of module.
 """
 
-__version__ = "0.9.2"
+__version__ = "0.9.3"
