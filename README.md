@@ -3,7 +3,7 @@
 This is a template repository that can be cloned/forked to easily create new projects from a good starting basis. It includes best practices that I have learned, including
 
 - dependency management via `poetry`
-- pre-commit hooks for formatters & linters such as `black`, `flake8`, `mypy`
+- pre-commit hooks for formatters & linters via `ruff` and `mypy`
 - semantic versioning & changelog releases via `commitizen`
 - automatic documenation via `mkdocs` following the [Diátaxis documentation framework](https://diataxis.fr/) best practices
 - a proper project structure / skeleton
@@ -67,7 +67,6 @@ The documentation is also hosted via GitHub pages through the `.github/workflows
 ## Roadmap
 
 - proper README
-- mkdocstrings to automatically populate the documentation
 - logging via https://engineeringfordatascience.com/posts/python_logging/
 - maybe: https://github.com/folke/devmoji
 - maybe: proper CICD
