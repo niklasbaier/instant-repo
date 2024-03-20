@@ -21,6 +21,28 @@ your use case by looking at the different pages.
 
 ::: src.app
 
+## Project Setup
+
+Install project dependencies from `pyproject.toml`:
+
+<!-- termynal -->
+
+```
+$ poetry install
+---> 100%
+Installed
+```
+
+Install pre-commit hooks from `.pre-commit-config.yaml`:
+
+<!-- termynal -->
+
+```
+$ pre-commit install
+---> 100%
+Installed
+```
+
 ## Acknowledgements
 
 I want to thank ...

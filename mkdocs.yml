@@ -68,4 +68,3 @@ plugins:
   - search
   - termynal
   - mkdocstrings
-  - git-authors
