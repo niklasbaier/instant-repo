@@ -5,30 +5,36 @@ description = "template for personal projects"
 authors = ["niklasbaier <niklas.baier@yahoo.de>"]
 readme = "README.md"
 
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.poetry.dependencies]
 python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "*"
-black = "*"
-flake8 = "*"
-isort = "*"
 mypy = "*"
 types-requests = "*"
 pre-commit = "*"
 commitizen = "*"
-mkdocs-material = "*"
-mkdocstrings = { extras = ["python"], version = "^0.24.1" }
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.group.docs.dependencies]
+mkdocs-material = "*"
+termynal = "*"
+mkdocs-git-authors-plugin = "*"
+mkdocstrings = "*"
+mkdocstrings-python = "*"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
 version = "0.9.3"
 tag_format = "v$version"
-version_files = ["pyproject.toml:^version", "src/app/__init__.py:^__version"]
+version_files = [
+    "pyproject.toml:^version",
+    "src/app/__init__.py:^__version",
+    ".project-template-version:ˆversion",
+]
 update_changelog_on_bump = true
 changelog_incremental = true
 changelog_merge_prerelease = true

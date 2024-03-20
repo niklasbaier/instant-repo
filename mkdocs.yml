@@ -1,4 +1,6 @@
 site_name: Project Template
+repo_url: https://github.com/niklasbaier/project_template
+repo_name: project_template
 theme:
   name: material
   features:
@@ -64,4 +66,6 @@ copyright: |
 
 plugins:
   - search
+  - termynal
   - mkdocstrings
+  - git-authors
