@@ -8,3 +8,4 @@ Modules exported by this package:
 """
 
 __version__ = "0.9.3"
+__project_template_version__ = "0.9.3"
