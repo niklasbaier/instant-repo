@@ -43,7 +43,7 @@ echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zsh
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ```
 
-Restart your shell and install the appropriate version of Python (set it before in the `.pythion-version` file:
+Restart your shell and install the appropriate version of Python (set it before in the `.pythion-version` file):
 
 ```
 pyenv install <.python-version
