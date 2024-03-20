@@ -33,7 +33,7 @@ tag_format = "v$version"
 version_files = [
     "pyproject.toml:^version",
     "src/app/__init__.py:^__version",
-    ".project-template-version:ˆversion", # TODO: remove
+    "src/app/__init__.py:^__project_template_version", # TODO: remove
 ]
 update_changelog_on_bump = true
 changelog_incremental = true
