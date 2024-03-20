@@ -1,3 +1,9 @@
+## v0.10.0 (2024-03-20)
+
+### Feat
+
+- add more parts to README
+
 ## v0.9.6 (2024-03-20)
 
 ### Fix
