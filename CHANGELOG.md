@@ -1,3 +1,11 @@
+## v0.9.4 (2024-03-20)
+
+### Fix
+
+- project_template versioning
+- project_template versioning
+- add own docs group to pyproject.toml
+
 ## v0.9.3 (2024-03-16)
 
 ### Fix
