@@ -1,3 +1,9 @@
+## v0.11.2 (2024-03-21)
+
+### Fix
+
+- add Changelog and About section to docs
+
 ## v0.11.1 (2024-03-20)
 
 ### Fix
