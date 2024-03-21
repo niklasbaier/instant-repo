@@ -93,12 +93,6 @@ The documentation is also hosted via GitHub pages through the `.github/workflows
 
 > If you have ideas for releases in the future, it is a good idea to list them in the README.
 
-- proper README
-- logging via https://engineeringfordatascience.com/posts/python_logging/
-- maybe: https://github.com/folke/devmoji
-- maybe: proper CICD
-- maybe: releases?
-
 ## Contributing
 
 > State if you are open to contributions and what your requirements are for accepting them.
