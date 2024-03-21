@@ -1,6 +1,6 @@
 # src/app/mkdocstrings_example.py
 
-"""Quick descrpition about contents of module.
+"""Quick description about contents of module.
 
 This module allows the user to make mathematical calculations.
 

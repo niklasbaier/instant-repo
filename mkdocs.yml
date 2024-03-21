@@ -29,11 +29,16 @@ theme:
       accent: lime
 
 nav:
-  - index.md
+  - Home: index.md
   - tutorials.md
   - how-to-guides.md
   - reference.md
   - explanation.md
+  - Changelog: changelog.md
+  - About:
+      - "The author": author.md
+      - "Why this project?": motivation.md
+      - License: license.md
 
 extra:
   social:
@@ -68,3 +73,6 @@ plugins:
   - search
   - termynal
   - mkdocstrings
+  - include-markdown:
+      opening_tag: "[%"
+      closing_tag: "%]"

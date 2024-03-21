@@ -1,0 +1,2 @@
+- familiarize myself with setting up a proper project
+- continuously update with new findings
