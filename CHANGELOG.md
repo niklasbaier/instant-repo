@@ -1,3 +1,10 @@
+## v0.11.4 (2024-03-22)
+
+### Fix
+
+- CICD
+- rename to make importable
+
 ## v0.11.3 (2024-03-21)
 
 ### Fix
