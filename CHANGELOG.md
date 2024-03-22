@@ -1,3 +1,9 @@
+## v0.11.5 (2024-03-22)
+
+### Fix
+
+- adapt pre-commit hooks for ruff
+
 ## v0.11.4 (2024-03-22)
 
 ### Fix
