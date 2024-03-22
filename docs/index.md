@@ -19,7 +19,7 @@ your use case by looking at the different pages.
 
 ## Project Overview
 
-::: src.app
+::: src.project_template
 
 ## Project Setup
 
