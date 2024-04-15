@@ -1,3 +1,9 @@
+## v0.12.1 (2024-04-15)
+
+### Fix
+
+- change poetry installation
+
 ## v0.12.0 (2024-04-15)
 
 ### Feat
