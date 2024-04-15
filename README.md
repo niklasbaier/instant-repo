@@ -29,6 +29,11 @@ If cloned/forked, delete the `CHANGELOG.md`, and reset the `[tool.poetry]/versio
 
 > Within a particular ecosystem, there may be a common way of installing things, such as using [Yarn](https://yarnpkg.com/), [NuGet](https://www.nuget.org/), or [Homebrew](https://brew.sh/). However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
+This projects assumes a generic development setup on your machine, most notably:
+
+- homebrew
+- XCode development kit
+
 Install pyenv:
 
 ```
@@ -49,10 +54,19 @@ Restart your shell and install the appropriate version of Python (set it before 
 pyenv install <.python-version
 ```
 
+Install `pipx`:
+
+```
+brew install pipx
+pipx ensurepath
+sudo pipx ensurepath --global # optional to allow pipx actions in global scope
+```
+
 Install `poetry`:
 
 ```
-curl -sSL https://install.python-poetry.org | python3 -
+POETRY_VERSION=$(cat .poetry-version)
+pipx install "poetry==$POETRY_VERSION"
 ```
 
 Confirm it has worked:
@@ -70,13 +84,22 @@ poetry install
 Install pre-commit hooks from the `.pre-commit-config.yaml` via:
 
 ```
-pre-commit install
+poetry run pre-commit install
 ```
+
+or simply
+
+```
+pre-commit install
+``
+if in the poetry shell
 
 Run the documentation locally via:
 
 ```
+
 mkdocs serve
+
 ```
 
 The documentation is also hosted via GitHub pages through the `.github/workflows/ci.yaml`. This has to be initialized in the repo settings > pages > Build and deployment > Source > Deploy from a branch, > Branch > gh-pages > / (root) > Save
@@ -112,3 +135,4 @@ The documentation is also hosted via GitHub pages through the `.github/workflows
 ## Project status
 
 > If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+```
