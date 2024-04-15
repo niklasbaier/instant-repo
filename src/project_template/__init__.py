@@ -7,5 +7,5 @@ Modules exported by this package:
 - `mkdocstrings_example`: Quick description about contents of module.
 """
 
-__version__ = "0.11.8"  # TODO: initialize to "0.1.0"
-__project_template_version__ = "0.11.8"  # do not change
+__version__ = "0.12.0"  # TODO: initialize to "0.1.0"
+__project_template_version__ = "0.12.0"  # do not change

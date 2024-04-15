@@ -1,3 +1,15 @@
+## v0.12.0 (2024-04-15)
+
+### Feat
+
+- setup basic logging
+
+### Fix
+
+- add comment for clarification
+- add poetry version file
+- update author notes
+
 ## v0.11.8 (2024-03-22)
 
 ### Fix
