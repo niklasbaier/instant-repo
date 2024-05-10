@@ -14,6 +14,7 @@ This is a template repository that can be cloned/forked to easily create new pro
 - automated documenation via `mkdocs` following the [Diátaxis documentation framework](https://diataxis.fr/) best practices
 - a proper project structure / skeleton
 - a proper README following <https://www.makeareadme.com/>
+- proper logging for dev & prod environment, for terminal & into logfiles (/logs), following <https://engineeringfordatascience.com/posts/python_logging/>
 
 If cloned/forked, delete the `CHANGELOG.md`, and reset the `[tool.poetry]/version` and `[tool.commitizen]/version` back to `0.1.0` in the `pyproject.toml`, as well as in `src/app/__init__.py`.
 
