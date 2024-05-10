@@ -1,3 +1,24 @@
+## v0.14.0 (2024-05-10)
+
+### Feat
+
+- add CICD with linting, testing, version bumping, and docs deployment
+- add CICD with linting, testing, version bumping, and docs deployment
+- add CICD with linting, testing, version bumping, and docs deployment
+- first unified CICD approach
+- add example tests (always passing for CICD)
+
+### Fix
+
+- trying to fix CICD
+- trying to fix CICD
+- trying to fix CICD
+- trying to fix CICD
+- trying to fix CICD
+- trying to fix CICD
+- trying to fix CICD
+- typo in CICD
+
 ## v0.13.1 (2024-05-10)
 
 ### Fix
