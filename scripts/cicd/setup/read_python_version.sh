@@ -3,4 +3,4 @@
 set -eux
 
 PYTHON_VERSION=$(cat .python-version)
-echo "$PYTHON_VERSION"
+export "$PYTHON_VERSION"

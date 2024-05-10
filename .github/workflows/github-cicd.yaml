@@ -18,10 +18,16 @@ jobs:
 
       # Setup steps
       # -----------
+      - name: Read Python version from .python-version file
+        id: python_version
+        run: |
+          PYTHON_VERSION=$(scripts/cicd/setup/read_poetry_version.sh)
+          echo "::set-output name=PYTHON_VERSION::$PYTHON_VERSION"
+
       - name: Install Python
         uses: actions/setup-python@v2
         with:
-          python-version: $(scripts/cicd/setup/read_python_version.sh)
+          python-version: ${{ steps.python_version.outputs.PYTHON_VERSION }}
 
       - name: Install Poetry
         run: bash scripts/cicd/setup/install_poetry.sh
