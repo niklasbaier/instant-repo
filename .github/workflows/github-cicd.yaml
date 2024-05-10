@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 # TODO: separate into qa, build, review, bump, release, deploy?
 jobs:
   build:
