@@ -18,26 +18,13 @@ jobs:
 
       # Setup steps
       # -----------
-      - name: Read Python version from .python-version file
-        id: python_version
-        run: bash scripts/cicd/setup/read_python_version.sh
-
-      - name: Set up Python ${{ steps.python_version.outputs.PYTHON_VERSION }}
+      - name: Install Python
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ steps.python_version.outputs.PYTHON_VERSION }}
+          python-version: ${{ bash scripts/cicd/setup/read_python_version.sh }}
 
-      - name: Read Poetry version from .poetry-version file
-        id: poetry_version
-        run: echo "::set-output name=POETRY_VERSION::$(cat .poetry-version)"
-
-      - name: Install pipx
-        run: python3 -m pip install --user pipx
-
-      - name: Install Poetry ${{ steps.poetry_version.outputs.POETRY_VERSION }}
-        run: |
-          python3 -m pipx ensurepath
-          pipx install poetry==${{ steps.poetry_version.outputs.POETRY_VERSION }}
+      - name: Install Poetry
+        run: bash scripts/cicd/setup/install_poetry.sh
 
       - name: Install dependencies
         run: poetry install --no-interaction --no-ansi
@@ -104,7 +91,7 @@ jobs:
       # -----------
       - name: Read Python version from .python-version file
         id: python_version
-        run: echo "::set-output name=PYTHON_VERSION::$(cat .python-version)"
+        run: bash scripts/cicd/setup/read_python_version.sh
 
       - name: Set up Python ${{ steps.python_version.outputs.PYTHON_VERSION }}
         uses: actions/setup-python@v2
@@ -113,10 +100,10 @@ jobs:
 
       - name: Read Poetry version from .poetry-version file
         id: poetry_version
-        run: echo "::set-output name=POETRY_VERSION::$(cat .poetry-version)"
+        run: bash scripts/cicd/setup/read_poetry_version.sh
 
       - name: Install pipx
-        run: python3 -m pip install --user pipx
+        run: bash scripts/cicd/setup/install_pipx.sh
 
       - name: Install Poetry ${{ steps.poetry_version.outputs.POETRY_VERSION }}
         run: |
