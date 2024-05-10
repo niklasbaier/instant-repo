@@ -19,6 +19,7 @@ mypy = "*"
 types-requests = "*"
 pre-commit = "*"
 commitizen = "*"
+ruff = "^0.4.4"
 
 [tool.poetry.group.docs.dependencies]
 mkdocs-material = "*"
