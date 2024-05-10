@@ -14,8 +14,8 @@ LOG_DIR = "./logs"
 
 def setup_logging():
     """Load logging configuration."""
-    log_configs = {"dev": "logging.dev.ini", "prod": "logging.prod.ino"}
-    config = log_configs.get(os.environ["ENV"], "logging.dev.ini")
+    log_configs = {"dev": "logging.dev.init", "prod": "logging.prod.init"}
+    config = log_configs.get(os.environ["ENV"], "logging.dev.init")
     config_path = f"{CONFIG_DIR}/{config}"
 
     timestamp = datetime.now().strftime("%Y%m%d-%H:%M:%S")
