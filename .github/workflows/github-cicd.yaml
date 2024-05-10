@@ -20,9 +20,7 @@ jobs:
       # -----------
       - name: Read Python version from .python-version file
         id: python_version
-        run: |
-          PYTHON_VERSION=$(bash scripts/cicd/setup/read_python_version.sh)
-          echo "::set-output name=PYTHON_VERSION::$PYTHON_VERSION"
+        run: echo "::set-output name=PYTHON_VERSION::$(bash scripts/cicd/setup/read_python_version.sh)"
 
       - name: Install Python
         uses: actions/setup-python@v2
