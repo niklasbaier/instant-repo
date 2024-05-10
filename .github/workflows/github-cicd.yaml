@@ -21,7 +21,7 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ shell scripts/cicd/setup/read_python_version.sh }}
+          python-version: $(scripts/cicd/setup/read_python_version.sh)
 
       - name: Install Poetry
         run: bash scripts/cicd/setup/install_poetry.sh
