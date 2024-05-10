@@ -67,6 +67,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Read Python version from .python-version file
+        id: python_version
+        run: echo "::set-output name=PYTHON_VERSION::$(cat .python-version)"
+
+      - name: Set up Python ${{ steps.python_version.outputs.PYTHON_VERSION }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ steps.python_version.outputs.PYTHON_VERSION }}
+
       - name: Read Poetry version from .poetry-version file
         id: poetry_version
         run: echo "::set-output name=POETRY_VERSION::$(cat .poetry-version)"
