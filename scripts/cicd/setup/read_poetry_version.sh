@@ -3,4 +3,4 @@
 set -eux
 
 POETRY_VERSION=$(cat .poetry-version)
-export "$POETRY_VERSION"
+echo "$POETRY_VERSION"
