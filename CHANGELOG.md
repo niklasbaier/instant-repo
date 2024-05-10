@@ -1,3 +1,9 @@
+## v0.15.1 (2024-05-10)
+
+### Fix
+
+- **cicd**: add integration & acceptance tests to codecov upload
+
 ## v0.15.0 (2024-05-10)
 
 ### Feat
