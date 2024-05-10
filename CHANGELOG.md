@@ -1,3 +1,9 @@
+## v0.15.0 (2024-05-10)
+
+### Feat
+
+- **cicd**: add codecov coverage reports for unit tests
+
 ## v0.14.4 (2024-05-10)
 
 ### Refactor
