@@ -99,5 +99,5 @@ jobs:
       - name: Install docs dependencies
         run: poetry install --only docs --no-interaction --no-ansi
 
-      - name: Trigger docs deployment
+      - name: Trigger docs deployment (`pages-build-deployment` workflow)
         run: poetry run mkdocs gh-deploy --force
