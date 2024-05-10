@@ -20,7 +20,7 @@ jobs:
       # -----------
       - name: Read Python version from .python-version file
         id: python_version
-        run: ./scripts/cicd/setup/read_python_version.sh
+        run: bash scripts/cicd/setup/read_python_version.sh
 
       - name: Set up Python ${{ steps.python_version.outputs.PYTHON_VERSION }}
         uses: actions/setup-python@v2
