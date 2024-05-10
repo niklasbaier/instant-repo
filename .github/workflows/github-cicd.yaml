@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
 
-# TODO: separate into qa, build, review, bump, release, deploy?
+# TODO: add appropriate build and deploy jobs
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -62,7 +62,22 @@ jobs:
       # - name: QA - OpenAPI spec linting
       #   run: poetry run openapi-spec-validator services/api/openapi.yml
 
-  # bump:
+  bump:
+    if: "!startsWith(github.event.head_commit.message, 'bump:')"
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
+          fetch-depth: 0
+
+      - name: Create bump and changelog
+        uses: commitizen-tools/commitizen-action@master
+        with:
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
