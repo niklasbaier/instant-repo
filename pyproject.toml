@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "project_template"
-version = "0.13.0"                                # TODO: initialize to "0.1.0"
+version = "0.13.1"                                # TODO: initialize to "0.1.0"
 description = "template for personal projects"
 authors = ["niklasbaier <niklas.baier@yahoo.de>"]
 readme = "README.md"
@@ -30,7 +30,7 @@ mkdocs-include-markdown-plugin = "*"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.13.0"
+version = "0.13.1"
 tag_format = "v$version"
 version_files = [
     "pyproject.toml:^version",

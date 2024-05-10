@@ -1,3 +1,9 @@
+## v0.13.1 (2024-05-10)
+
+### Fix
+
+- add missing .gitkeep and documentation about logs in README
+
 ## v0.13.0 (2024-05-10)
 
 ### Feat
