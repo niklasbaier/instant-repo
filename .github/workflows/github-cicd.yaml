@@ -64,6 +64,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - uses: actions/cache@v2
+        with:
+          key: ${{ github.ref }}$
+          path: .cache
+
       - name: Checkout code
         uses: actions/checkout@v3
 
