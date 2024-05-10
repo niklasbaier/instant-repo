@@ -1,3 +1,13 @@
+## v0.14.1 (2024-05-10)
+
+### Fix
+
+- **cicd**: address typo
+
+### Refactor
+
+- **cicd**: apply caching to avoid having to reinstall Python, Poetry and the project dependencies in the deploy job
+
 ## v0.14.0 (2024-05-10)
 
 ### Feat
