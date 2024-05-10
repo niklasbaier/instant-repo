@@ -16,6 +16,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Cache setup (Python, Poetry, dependencies)
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/poetry.lock') }}
+
+      # Setup steps
+      # -----------
       - name: Read Python version from .python-version file
         id: python_version
         run: echo "::set-output name=PYTHON_VERSION::$(cat .python-version)"
@@ -40,27 +48,35 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-interaction --no-ansi
 
-      - name: QA - Ensure correct specifications of dependencies
+      # QA steps (could also live in their own job)
+      # -----------
+      - name: Ensure correct specifications of dependencies
         run: poetry check
 
-      - name: QA - Static tests - Linting with Ruff
+      - name: Static tests (linting with ruff)
         run: poetry run ruff check .
 
-      - name: QA - unit tests
+      # only applicable if using an API service that uses OpenAPI
+      # - name: OpenAPI spec linting
+      #   run: poetry run openapi-spec-validator services/api/openapi.yml
+
+      # only applicable if using a DB service that uses alembic for migrations
+      # - name: Alembic check
+      #   run: |
+      #     poetry run alembic upgrade head
+      #     poetry run alembic check
+
+      - name: Unit tests
         run: poetry run pytest tests/unit
 
-      - name: QA - integration tests
+      - name: Integration tests
         run: poetry run pytest tests/integration
 
-      - name: QA - acceptance tests
+      - name: Acceptance tests
         run: poetry run pytest tests/acceptance
 
-      # - name: QA - report test results (codecov)
+      # - name: Report test results (codecov)
       #   run: ...
-
-      # only applicable, if using an API service that uses OpenAPI
-      # - name: QA - OpenAPI spec linting
-      #   run: poetry run openapi-spec-validator services/api/openapi.yml
 
   bump:
     if: "!startsWith(github.event.head_commit.message, 'bump:')"
@@ -87,29 +103,35 @@ jobs:
           key: ${{ github.ref }}$
           path: .cache
 
+      - name: Restore setup cache (Python, Poetry, dependencies)
+      - uses: actions/cache@v2
+        with:
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/poetry.lock') }}
+          path: ~/.cache/pip
+
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Read Python version from .python-version file
-        id: python_version
-        run: echo "::set-output name=PYTHON_VERSION::$(cat .python-version)"
+      # - name: Read Python version from .python-version file
+      #   id: python_version
+      #   run: echo "::set-output name=PYTHON_VERSION::$(cat .python-version)"
 
-      - name: Set up Python ${{ steps.python_version.outputs.PYTHON_VERSION }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ steps.python_version.outputs.PYTHON_VERSION }}
+      # - name: Set up Python ${{ steps.python_version.outputs.PYTHON_VERSION }}
+      #   uses: actions/setup-python@v2
+      #   with:
+      #     python-version: ${{ steps.python_version.outputs.PYTHON_VERSION }}
 
-      - name: Read Poetry version from .poetry-version file
-        id: poetry_version
-        run: echo "::set-output name=POETRY_VERSION::$(cat .poetry-version)"
+      # - name: Read Poetry version from .poetry-version file
+      #   id: poetry_version
+      #   run: echo "::set-output name=POETRY_VERSION::$(cat .poetry-version)"
 
-      - name: Install pipx
-        run: python3 -m pip install --user pipx
+      # - name: Install pipx
+      #   run: python3 -m pip install --user pipx
 
-      - name: Install Poetry ${{ steps.poetry_version.outputs.POETRY_VERSION }}
-        run: |
-          python3 -m pipx ensurepath
-          pipx install poetry==${{ steps.poetry_version.outputs.POETRY_VERSION }}
+      # - name: Install Poetry ${{ steps.poetry_version.outputs.POETRY_VERSION }}
+      #   run: |
+      #     python3 -m pipx ensurepath
+      #     pipx install poetry==${{ steps.poetry_version.outputs.POETRY_VERSION }}
 
       - name: Install docs dependencies
         run: poetry install --only docs --no-interaction --no-ansi
