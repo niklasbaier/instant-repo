@@ -1,3 +1,13 @@
+## v0.14.2 (2024-05-10)
+
+### Fix
+
+- **cicd**: address permission denied error
+
+### Refactor
+
+- **cicd**: start replacing ci run commands with shell scripts
+
 ## v0.14.1 (2024-05-10)
 
 ### Fix
