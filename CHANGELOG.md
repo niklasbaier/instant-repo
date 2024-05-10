@@ -2,13 +2,6 @@
 
 ### Fix
 
-- **cicd**: fix poetry install
-- **cicd**: try a last approach
-- **cicd**: try a last approach
-- **cicd**: try a last approach
-- **cicd**: try yet another different approach
-- **cicd**: try another different approach
-- **cicd**: try different approach
 - **cicd**: correct calling new shell scripts
 
 ### Refactor

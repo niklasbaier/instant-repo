@@ -22,7 +22,7 @@ jobs:
         id: python_version
         run: echo "::set-output name=PYTHON_VERSION::$(bash scripts/cicd/setup/read_python_version.sh)"
 
-      - name: Install Python
+      - name: Install Python ${{ steps.python_version.outputs.PYTHON_VERSION }}
         uses: actions/setup-python@v2
         with:
           python-version: ${{ steps.python_version.outputs.PYTHON_VERSION }}
@@ -95,24 +95,15 @@ jobs:
       # -----------
       - name: Read Python version from .python-version file
         id: python_version
-        run: bash scripts/cicd/setup/read_python_version.sh
+        run: echo "::set-output name=PYTHON_VERSION::$(bash scripts/cicd/setup/read_python_version.sh)"
 
-      - name: Set up Python ${{ steps.python_version.outputs.PYTHON_VERSION }}
+      - name: Install Python ${{ steps.python_version.outputs.PYTHON_VERSION }}
         uses: actions/setup-python@v2
         with:
           python-version: ${{ steps.python_version.outputs.PYTHON_VERSION }}
 
-      - name: Read Poetry version from .poetry-version file
-        id: poetry_version
-        run: bash scripts/cicd/setup/read_poetry_version.sh
-
-      - name: Install pipx
-        run: bash scripts/cicd/setup/install_pipx.sh
-
-      - name: Install Poetry ${{ steps.poetry_version.outputs.POETRY_VERSION }}
-        run: |
-          python3 -m pipx ensurepath
-          pipx install poetry==${{ steps.poetry_version.outputs.POETRY_VERSION }}
+      - name: Install Poetry
+        run: bash scripts/cicd/setup/install_poetry.sh
 
       # Docs steps
       # -----------
