@@ -52,25 +52,27 @@ jobs:
       #     poetry run alembic check
 
       - name: Unit tests
-        run: poetry run pytest --cov tests/unit/. --cov-report=xml:tests/unit/coverage.xml
+        run: poetry run pytest --cov tests/unit/. --cov-report=xml:tests/unit/coverage_unit.xml
 
       - name: Integration tests
-        run: poetry run pytest tests/integration
+        run: poetry run pytest --cov tests/integration/. --cov-report=xml:tests/integration/coverage_integration.xml
 
       - name: Acceptance tests
-        run: poetry run pytest tests/acceptance
+        run: poetry run pytest --cov tests/acceptance/. --cov-report=xml:tests/acceptance/coverage_acceptance.xml
 
-      - name: Upload coverage to Codecov
+      - name: Upload test coverage to Codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         if: ${{ env.CODECOV_TOKEN }}
         uses: codecov/codecov-action@v4
         with:
           fail_ci_if_error: false
-          files: tests/unit/coverage.xml
-          flags: unittests
-          name: codecov-umbrella # optional
-          token: ${{ secrets.CODECOV_TOKEN }} # required
+          files: |
+            tests/unit/coverage_unit.xml
+            tests/unit/coverage_integration.xml
+            tests/unit/coverage_acceptance.xml
+          flags: unittests, integrationtests, acceptancetests
+          token: ${{ secrets.CODECOV_TOKEN }} # defined in project settings
           verbose: true # optional (default = false)
 
   bump:
