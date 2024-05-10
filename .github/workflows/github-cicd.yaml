@@ -64,6 +64,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Read Poetry version from .poetry-version file
         id: poetry_version
         run: echo "::set-output name=POETRY_VERSION::$(cat .poetry-version)"
@@ -76,5 +79,5 @@ jobs:
           python3 -m pipx ensurepath
           pipx install poetry==${{ steps.poetry_version.outputs.POETRY_VERSION }}
 
-      - name: Deploy docs
+      - name: Trigger docs deployment
         run: poetry run mkdocs gh-deploy --force
