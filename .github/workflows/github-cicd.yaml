@@ -88,5 +88,8 @@ jobs:
           python3 -m pipx ensurepath
           pipx install poetry==${{ steps.poetry_version.outputs.POETRY_VERSION }}
 
+      - name: Install docs dependencies
+        run: poetry install --only docs --no-interaction --no-ansi
+
       - name: Trigger docs deployment
         run: poetry run mkdocs gh-deploy --force
