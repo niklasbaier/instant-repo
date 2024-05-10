@@ -1,3 +1,9 @@
+## v0.15.2 (2024-05-10)
+
+### Fix
+
+- **loggin**: fix typo and update config file names
+
 ## v0.15.1 (2024-05-10)
 
 ### Fix
