@@ -21,7 +21,7 @@ jobs:
       - name: Read Python version from .python-version file
         id: python_version
         run: |
-          PYTHON_VERSION=$(bash scripts/cicd/setup/read_poetry_version.sh)
+          PYTHON_VERSION=$(bash scripts/cicd/setup/read_python_version.sh)
           echo "::set-output name=PYTHON_VERSION::$PYTHON_VERSION"
 
       - name: Install Python
