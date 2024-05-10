@@ -1,3 +1,20 @@
+## v0.14.3 (2024-05-10)
+
+### Fix
+
+- **cicd**: fix poetry install
+- **cicd**: try a last approach
+- **cicd**: try a last approach
+- **cicd**: try a last approach
+- **cicd**: try yet another different approach
+- **cicd**: try another different approach
+- **cicd**: try different approach
+- **cicd**: correct calling new shell scripts
+
+### Refactor
+
+- **cicd**: try out new shell scripts
+
 ## v0.14.2 (2024-05-10)
 
 ### Fix
