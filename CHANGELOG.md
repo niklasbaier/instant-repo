@@ -1,3 +1,9 @@
+## v0.14.4 (2024-05-10)
+
+### Refactor
+
+- **cicd**: rest of CICD refactor & manual cleanup of CHANGELOG
+
 ## v0.14.3 (2024-05-10)
 
 ### Fix
