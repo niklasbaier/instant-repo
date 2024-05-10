@@ -1,3 +1,9 @@
+## v0.13.0 (2024-05-10)
+
+### Feat
+
+- add terminal & file logging for dev & prod environments
+
 ## v0.12.1 (2024-04-15)
 
 ### Fix
