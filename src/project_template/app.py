@@ -1,6 +1,6 @@
 import logging
 
-from commons import logging_helpers
+from commons import logging_helpers # type: ignore
 
 
 def main():
