@@ -8,9 +8,9 @@ on:
 permissions:
   contents: write
 
-# TODO: add appropriate build and deploy jobs
+# TODO: add appropriate build job and deploy steps
 jobs:
-  build:
+  qa:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-interaction --no-ansi
 
-      # QA steps (could also live in their own job)
+      # QA steps
       # -----------
       - name: Ensure correct specifications of dependencies
         run: poetry check
@@ -74,6 +74,8 @@ jobs:
           flags: unittests, integrationtests, acceptancetests
           token: ${{ secrets.CODECOV_TOKEN }} # defined in project settings
           verbose: true # optional (default = false)
+
+  # build:
 
   bump:
     if: "!startsWith(github.event.head_commit.message, 'bump:')"
