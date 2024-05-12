@@ -80,7 +80,7 @@ jobs:
   bump:
     if: "!startsWith(github.event.head_commit.message, 'bump:')"
     runs-on: ubuntu-latest
-    needs: build
+    needs: qa
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -95,7 +95,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: [build, bump]
+    needs: [qa, bump]
     steps:
       - uses: actions/cache@v2
         with:
