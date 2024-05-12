@@ -1,3 +1,10 @@
+## v0.15.4 (2024-05-12)
+
+### Fix
+
+- **qa**: temporary fix for mypy
+- **cicd**: add missing static type checking via mypy
+
 ## v0.15.3 (2024-05-12)
 
 ### Fix
