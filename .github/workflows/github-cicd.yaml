@@ -38,8 +38,11 @@ jobs:
       - name: Ensure correct specifications of dependencies
         run: poetry check
 
-      - name: Static tests (linting with ruff)
+      - name: Static tests - linting with ruff
         run: poetry run ruff check .
+
+      - name: Static tests - type checking with mypy
+        run: poetry run mypy src
 
       # only applicable if using an API service that uses OpenAPI
       # - name: OpenAPI spec linting
