@@ -1,6 +1,6 @@
 site_name: Project Template
-repo_url: https://github.com/niklasbaier/project_template
-repo_name: project_template
+repo_url: https://github.com/niklasbaier/project-template
+repo_name: project-template
 theme:
   name: material
   features:
@@ -31,13 +31,13 @@ theme:
 nav:
   - Home: index.md
   - tutorials.md
-  - how-to-guides.md
+  - How to Guides: how-to-guides.md
   - reference.md
   - explanation.md
-  - Changelog: changelog.md
+  - changelog.md
   - About:
-      - "The author": author.md
-      - "Why this project?": motivation.md
+      - The Author: author.md
+      - Why this Project?: motivation.md
       - License: license.md
 
 extra:
