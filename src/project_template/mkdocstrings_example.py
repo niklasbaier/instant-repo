@@ -1,4 +1,4 @@
-# src/app/mkdocstrings_example.py
+# src/project_template/mkdocstrings_example.py
 
 """Quick description about contents of module.
 

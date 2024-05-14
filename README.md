@@ -4,21 +4,36 @@
 
 ## Description
 
-> Let people know what your project can do specifically.Provide context and add a link to any reference visitors might be unfamiliar with. A list of **Features** or a **Background** subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.>
+> Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of **Features** or a **Background** subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.>
 
-This is a template repository that can be cloned/forked to easily create new projects from a good starting basis. It includes best practices that I have learned, including
+This is a template repository that can be cloned/forked to easily create new projects from a well-established starting basis. It includes best practices that I have come across, including
 
 - dependency management via [Poetry](https://python-poetry.org/docs/)
 - pre-commit hooks for formatters & linters via [Ruff](https://docs.astral.sh/ruff/) and `mypy`
-- [Semantic Versioning](https://semver.org/), [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) & automated [changelog](https://keepachangelog.com/en/1.1.0/) releases via `commitizen`
-- automated documenation via `mkdocs` following the [Diátaxis documentation framework](https://diataxis.fr/) best practices
-- a proper project structure / skeleton
-- a proper README following <https://www.makeareadme.com/>
-- proper logging for dev & prod environment, for terminal & into logfiles (/logs), following <https://engineeringfordatascience.com/posts/python_logging/>
-- a proper CICD skeleton via GitHub Actions (<https://hackernoon.com/how-to-integrate-github-actions-and-cicd-with-your-next-python-project>)
-- proper testing suite, also with codecov (free Teamscale alternative for personal use & OS!)
+- [semantic versioning](https://semver.org/), [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) & automated [Changelog](https://keepachangelog.com/en/1.1.0/) releases via `commitizen`
+- automated documenation via `mkdocs`, following the [Diátaxis documentation framework](https://diataxis.fr/) best practices
+- a proper project structure / skeleton with dedicated folders for various different files:
 
-If cloned/forked, delete the `CHANGELOG.md`, and reset the `[tool.poetry]/version` and `[tool.commitizen]/version` back to `0.1.0` in the `pyproject.toml`, as well as in `src/app/__init__.py`.
+```
+.
+├── .github                 # GitHub Actions workflows (CICD)
+├── config                  # Configuration files
+├── docs                    # Documentation files
+├── logs                    # Log files
+├── scripts                 # Shell scripts for local use or the CICD
+├── services                # Files for additional services such as a DB or API
+├── src                     # Source files
+├── tests                   # Automated tests
+│   ├── acceptance          # Acceptance tests
+│   ├── integration         # Integration tests
+│   └── unit                # Unit tests
+```
+
+- a proper [README.md](README.md), following <https://www.makeareadme.com/>
+- a proper logging setup for dev & prod environment, both in the terminal and exported into log files
+- a proper CICD skeleton via GitHub Actions with `QA` and `Deploy` jobs
+- a proper testing suite, with automated uploads to the free Teamscale alternative [Codecov](https://about.codecov.io/)
+- an [MIT License](https://opensource.org/license/mit)
 
 ## Badges
 
@@ -32,26 +47,17 @@ If cloned/forked, delete the `CHANGELOG.md`, and reset the `[tool.poetry]/versio
 
 > Within a particular ecosystem, there may be a common way of installing things, such as using [Yarn](https://yarnpkg.com/), [NuGet](https://www.nuget.org/), or [Homebrew](https://brew.sh/). However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-This projects assumes a generic development setup on your machine, most notably:
+This project template is meant to be forked into its very own pet project repository. Once forked, follow these steps to start from a fresh state:
 
-- homebrew
-- XCode development kit
+- delete the `CHANGELOG.md`, with the first push, it will be created anew
+- in the `pyproject.toml`, change up the `[tool.poetry]` section according to your liking, esp. regarding the `name` and `description` of the new project
+- still within the `pyproject.toml`, reset the `[tool.poetry]/version` and `[tool.commitizen]/version` back to `0.1.0`, and remove the `__project_template_version` version file
+- in `src/project_template/__init__.py`, reset the `__version__` back to `0.1.0`, and keep the `__project_template_version__`, if you want to keep a link upon which version of this project template your new pet project builds upon
+- rename all `project-template` and `project_template` references to your new pet project name (`shift+command+R` or `+H` in most IDEs)
 
-Install pyenv:
+This projects assumes a generic development setup on your machine, for a more detailed setup guide, refer to my [dev-setup project](https://github.com/niklasbaier/dev-setup).
 
-```
-brew install pyenv
-```
-
-Set your shell environment for pyenv:
-
-```
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
-```
-
-Restart your shell and install the appropriate version of Python (set it before in the `.pythion-version` file):
+Install the appropriate version of Python (set it before in the `.pythion-version` file):
 
 ```
 pyenv install <.python-version
@@ -134,6 +140,9 @@ The documentation is also hosted via GitHub pages through the `.github/workflows
 ## License
 
 > For open source projects, say how it is [licensed](https://choosealicense.com/).
+
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+
 
 ## Project status
 

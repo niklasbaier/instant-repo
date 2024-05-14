@@ -1,4 +1,4 @@
-# src/app/__init__.py
+# src/project_template/__init__.py
 
 """Write docstring for package in here.
 
