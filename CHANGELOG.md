@@ -1,3 +1,9 @@
+## v0.15.5 (2024-05-18)
+
+### Refactor
+
+- slight project structure refactor and for logging
+
 ## v0.15.4 (2024-05-12)
 
 ### Fix
