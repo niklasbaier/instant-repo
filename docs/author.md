@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-I'm Niklas, an Associate ML Engineer. This is my personal repository containing some small side projects of mine. I'm passionate about building end-to-end applications leveraging AI.
+I'm Niklas, an Associate ML Engineer. I'm passionate about building end-to-end AI applications.
 
 ### 🤖 Techstack
 
