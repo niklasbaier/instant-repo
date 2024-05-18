@@ -1,5 +1,5 @@
 This site contains the project documentation for the
-`project-template` project.
+`instant-repo` project.
 Its aim is to provide a ready-to-go project skeleton that has been built according to best practices.
 
 ## Table of Contents
@@ -26,7 +26,7 @@ your use case by looking at the different pages.
 
 ## Project Overview
 
-::: src.project_template
+::: src.instant_repo
 
 ## Project Setup
 
@@ -70,4 +70,4 @@ poetry run pytest tests/.
 
 ## Acknowledgements
 
-This project template budnles many of the best practices I'm learning at work through my peers, and seniors. It also includes a lot of wisdom of the crowd from various corners of the internet, so I'm thankful for everyone out there who spends time & resources to help out beginners!
+This project template bundles many of the best practices I'm learning at work through my peers, and seniors. It also includes a lot of wisdom of the crowd from various corners of the internet, so I'm thankful for everyone out there who spends time & resources to help out beginners!

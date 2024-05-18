@@ -1,6 +1,6 @@
 import logging
 
-from project_template import commons
+from instant_repo import commons
 
 
 def main():

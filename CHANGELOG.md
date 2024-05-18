@@ -190,8 +190,8 @@
 
 ### Fix
 
-- project_template versioning
-- project_template versioning
+- instant_repo versioning
+- instant_repo versioning
 - add own docs group to pyproject.toml
 
 ## v0.9.3 (2024-03-16)

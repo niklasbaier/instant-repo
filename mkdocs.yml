@@ -1,6 +1,6 @@
-site_name: Project Template
-repo_url: https://github.com/niklasbaier/project-template
-repo_name: project-template
+site_name: Instant Repo 🍜
+repo_url: https://github.com/niklasbaier/instant-repo
+repo_name: instant-repo
 theme:
   name: material
   features:

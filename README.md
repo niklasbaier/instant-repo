@@ -1,4 +1,4 @@
-# Project Template
+# Instant Repo 🍜
 
 > Choose a self-explaining name for your project.
 
@@ -25,7 +25,7 @@ This is a template repository that can be forked to easily create new projects f
 │   └── local                  # local scripts (e.g. build/run api, ui, ...)
 ├── services                # Files for additional services such as a DB / API
 ├── src                     # Source files
-│   └── project_template
+│   └── instant_repo
 │       └── commons               # Shared utility files
 ├── tests                   # Automated tests
 │   ├── acceptance             # Acceptance tests
@@ -59,9 +59,9 @@ This project template is meant to be forked into its very own pet project reposi
 
 - delete the `CHANGELOG.md` (with the first push, it will be created anew)
 - in the `pyproject.toml`, change up the `[tool.poetry]` section according to your liking, esp. regarding the `name` and `description` of the new project
-- still within the `pyproject.toml`, reset the `[tool.poetry]/version` and `[tool.commitizen]/version` back to `0.1.0`, and remove the `__project_template_version` version file
-- in `src/project_template/__init__.py`, reset the `__version__` back to `0.1.0`, and keep the `__project_template_version__`, if you want to keep a link upon which version of this project template the new pet project builds upon
-- rename all `project-template` and `project_template` references to the new pet project name (`shift+command+R` or `+H` in most IDEs)
+- still within the `pyproject.toml`, reset the `[tool.poetry]/version` and `[tool.commitizen]/version` back to `0.1.0`, and remove the `__instant_repo_version` version file
+- in `src/instant_repo/__init__.py`, reset the `__version__` back to `0.1.0`, and keep the `__instant_repo_version__`, if you want to keep a link upon which version of this project template the new pet project builds upon
+- rename all `instant-repo` and `instant_repo` references to the new pet project name (`shift+command+R` or `+H` in most IDEs)
 
 The documentation is hosted via GitHub pages through the `.github/workflows/ci.yaml`. This has to be initialized in the repo Settings > Pages > Build and deployment > Source > Deploy from a branch, > Branch > gh-pages > / (root) > Save
 
@@ -153,6 +153,8 @@ While updates to this repository will most likely come in rather unregular inter
 ## Authors and acknowledgment
 
 > Show your appreciation to those who have contributed to the project.
+
+This project template bundles many of the best practices I'm learning at work through my peers, and seniors. It also includes a lot of wisdom of the crowd from various corners of the internet, so I'm thankful for everyone out there who spends time & resources to help out beginners!
 
 ## License
 

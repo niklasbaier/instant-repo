@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "project_template"                         # TODO: change name
+name = "instant_repo"                             # TODO: change name
 version = "0.15.5"                                # TODO: initialize to "0.1.0"
 description = "template for personal projects"    # TODO: change description
 authors = ["niklasbaier <niklas.baier@yahoo.de>"]
@@ -36,8 +36,8 @@ version = "0.15.5" # TODO: initialize to "0.1.0"
 tag_format = "v$version"
 version_files = [
     "pyproject.toml:^version",
-    "src/project_template/__init__.py:^__version",
-    "src/project_template/__init__.py:^__project_template_version", # TODO: remove
+    "src/instant_repo/__init__.py:^__version",
+    "src/instant_repo/__init__.py:^__instant_repo_version", # TODO: remove
 ]
 update_changelog_on_bump = true
 changelog_incremental = true
