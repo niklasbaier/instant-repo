@@ -1,10 +1,10 @@
 import logging
 
-from commons import logging_helpers # type: ignore
+from project_template import commons
 
 
 def main():
-    logging_helpers.setup_logging()
+    commons.setup_logging()
     logger = logging.getLogger(__name__)
 
     logger.debug("This is a log entry for debugging.")
