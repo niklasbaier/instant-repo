@@ -100,7 +100,7 @@ poetry run pre-commit install
 
 > Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-To run the main src/project/template/app.py file:
+To run the main `src/project/template/app.py` file:
 
 ```
 poetry run python3 app.py
@@ -124,9 +124,9 @@ To run the pre-commit hooks manually:
 poetry run pre-commit run --all
 ```
 
-Generally, it pays to follow the best practices of the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html) and [PEP 8](https://peps.python.org/pep-0008/).
+For development, it pays to follow the best practices of the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html) and [PEP 8](https://peps.python.org/pep-0008/).
 
-It also makes sense to work in dedicated feature branches that relate to specific issues, and then open up PRs to merge into `main`. Once a push or merge into `main` has been successful, a version bump and automated changelog updatge will be triggered by the `bump` job of the CICD, as well as the creation of a new release tag, and a deployment of the updated docs to Github pages.
+It also makes sense to work in dedicated feature branches that relate to specific issues, and then open up PRs to merge into `main`. Once a push or merge into `main` has been successful, a version bump and automated changelog update will be triggered by the `bump` job of the CICD, as well as the creation of a new release tag, and a deployment of the updated docs to Github pages.
 
 ## Support
 
