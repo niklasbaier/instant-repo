@@ -10,7 +10,7 @@ My focus lies on Python, with some SQL mixed in. I have gathered some front-end 
 
 ### 🎓 Academia
 
-I have studied a combination of Quantitative Finance & Computer Science at the Technical University of Munich (TUM). My master's thesis leveraged different Machine Learning models to forecast Corporate Earnings up to three years into the future, derive firms' implied cost of capital esimates from these forecasts, and finally formulate investment strategies that outperformed those based on financial analysts' earnings estimates.
+I have studied a combination of Quantitative Finance & Computer Science at the Technical University of Munich (TUM). My master's thesis leveraged different Machine Learning models to forecast Corporate Earnings up to three years into the future, derive firms' implied cost of capital estimates from these forecasts, and finally formulate investment strategies that outperformed those based on financial analysts' earnings estimates.
 
 ### 📞 Socials
 
