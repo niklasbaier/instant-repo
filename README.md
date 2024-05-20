@@ -83,6 +83,8 @@ The documentation is hosted via GitHub pages through the `.github/workflows/ci.y
 - in `src/instant_repo/__init__.py`, reset the `__version__` back to `0.1.0`, and keep the `__instant_repo_version__`, if you want to keep a link upon which version of this project template the new pet project builds upon
 - rename all `instant-repo` and `instant_repo` references to the new pet project name (`shift+command+R` or `+H` in most IDEs); don't forget the subdirectory below `src`
 
+Finally, change up the `README.md` and existing `docs` as you please.
+
 ### Install project dependencies
 
 This project assumes a generic Python development setup on your machine. For a more detailed setup guide, refer to my (upcoming) [dev-setup project](https://github.com/niklasbaier/dev-setup).
