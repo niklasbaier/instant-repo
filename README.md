@@ -6,7 +6,7 @@
 
 > Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of **Features** or a **Background** subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-This is a template repository that can be forked to easily create new projects from a well-established starting basis. It includes best practices that I have come across, including
+This is a template repository that can be used/forked to easily create new projects from a well-established starting basis. It includes best practices that I have come across, including
 
 - dependency management via [Poetry](https://python-poetry.org/docs/)
 - pre-commit hooks for formatters & linters via [Ruff](https://docs.astral.sh/ruff/) and `mypy`
@@ -55,7 +55,23 @@ Finally, while there exist tools for creating project templates such as [copier]
 
 > Within a particular ecosystem, there may be a common way of installing things, such as using [Yarn](https://yarnpkg.com/), [NuGet](https://www.nuget.org/), or [Homebrew](https://brew.sh/). However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-This project template is meant to be forked into its very own pet project repository. Once forked, follow these steps to start from a fresh state:
+This project template is meant to be forked into its very own pet project repository, or used directly as a template repository. Once a new pet project has been created from this template, follow these steps to start from a fresh state:
+
+### Setup GitHub Actions & Protect main branch
+
+If not already done, in your GitHub Developer Settings, create a [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-token) named `GITHUB_ACTIONS`, set its expiration to `No expiration`, and select `repo` as scope. Make sure to copy the token to your clipboard before moving on.
+
+Add your copied `GITHUB_ACTIONS` token to the new repo via Settings > Secrets and variables > Actions > New repository secret, and name it `PERSONAL_ACCESS_TOKEN`.
+
+Optionally, you can protect the `main` branch of this project such that PRs are necessary to push changes into changes into it, via repo Settings > Branches > Branch protection rules > Protect matching branches > Require a pull request before merging.
+
+### Setup Codecov
+
+Log into Codecov with your GitHub account and click on `Configure` next to the newly created repo to create a `CODECOV_TOKEN`. As before, make sure to copy this token to your clipboard and head back to GitHub.
+
+Add your copied `CODECOV_TOKEN` to the new repo via Settings > Secrets and variables > Actions > New repository secret, and name it `CODECOV_TOKEN`.
+
+### Reset project versions
 
 - delete the `CHANGELOG.md` (with the first push, it will be created anew)
 - in the `pyproject.toml`, change up the `[tool.poetry]` section according to your liking, esp. regarding the `name` and `description` of the new project
@@ -64,6 +80,8 @@ This project template is meant to be forked into its very own pet project reposi
 - rename all `instant-repo` and `instant_repo` references to the new pet project name (`shift+command+R` or `+H` in most IDEs)
 
 The documentation is hosted via GitHub pages through the `.github/workflows/ci.yaml`. This has to be initialized in the repo Settings > Pages > Build and deployment > Source > Deploy from a branch, > Branch > gh-pages > / (root) > Save
+
+### Install project dependencies
 
 This project assumes a generic Python development setup on your machine. For a more detailed setup guide, refer to my (upcoming) [dev-setup project](https://github.com/niklasbaier/dev-setup).
 
