@@ -81,7 +81,7 @@ The documentation is hosted via GitHub pages through the `.github/workflows/ci.y
 - in the `pyproject.toml`, change up the `[tool.poetry]` section according to your liking, esp. regarding the `name` and `description` of the new project
 - still within the `pyproject.toml`, reset the `[tool.poetry]/version` and `[tool.commitizen]/version` back to `0.1.0`, and remove the `__instant_repo_version` version file
 - in `src/instant_repo/__init__.py`, reset the `__version__` back to `0.1.0`, and keep the `__instant_repo_version__`, if you want to keep a link upon which version of this project template the new pet project builds upon
-- rename all `instant-repo` and `instant_repo` references to the new pet project name (`shift+command+R` or `+H` in most IDEs)
+- rename all `instant-repo` and `instant_repo` references to the new pet project name (`shift+command+R` or `+H` in most IDEs); don't forget the subdirectory below `src`
 
 ### Install project dependencies
 
@@ -120,7 +120,7 @@ poetry run pre-commit install
 
 > Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
-To run the main `src/project/template/app.py` file:
+To run the main `src/instant_repo/app.py` file:
 
 ```
 poetry run python3 app.py
