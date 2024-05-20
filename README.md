@@ -71,6 +71,10 @@ Log into Codecov with your GitHub account and click on `Configure` next to the n
 
 Add your copied `CODECOV_TOKEN` to the new repo via Settings > Secrets and variables > Actions > New repository secret, and name it `CODECOV_TOKEN`.
 
+### Setup GitHub pages
+
+The documentation is hosted via GitHub pages through the `.github/workflows/ci.yaml`. This has to be initialized in the repo Settings > Pages > Build and deployment > Source > Deploy from a branch, > Branch > gh-pages > / (root) > Save
+
 ### Reset project versions
 
 - delete the `CHANGELOG.md` (with the first push, it will be created anew)
@@ -78,8 +82,6 @@ Add your copied `CODECOV_TOKEN` to the new repo via Settings > Secrets and varia
 - still within the `pyproject.toml`, reset the `[tool.poetry]/version` and `[tool.commitizen]/version` back to `0.1.0`, and remove the `__instant_repo_version` version file
 - in `src/instant_repo/__init__.py`, reset the `__version__` back to `0.1.0`, and keep the `__instant_repo_version__`, if you want to keep a link upon which version of this project template the new pet project builds upon
 - rename all `instant-repo` and `instant_repo` references to the new pet project name (`shift+command+R` or `+H` in most IDEs)
-
-The documentation is hosted via GitHub pages through the `.github/workflows/ci.yaml`. This has to be initialized in the repo Settings > Pages > Build and deployment > Source > Deploy from a branch, > Branch > gh-pages > / (root) > Save
 
 ### Install project dependencies
 
